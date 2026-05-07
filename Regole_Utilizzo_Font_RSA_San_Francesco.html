@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>RSA San Francesco - Regole Utilizzo Font</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: #f7f7f9;
+    color: #1a1a2e;
+    line-height: 1.5;
+    padding: 40px 20px;
+  }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    border-bottom: 3px solid #273B98;
+    padding-bottom: 18px;
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #161862;
+    letter-spacing: -0.5px;
+  }
+  .header h1 span { color: #273B98; }
+  .header .subtitle {
+    color: #6b6b80;
+    font-size: 14px;
+    text-align: right;
+  }
+  .header .subtitle b { color: #161862; }
+
+  /* Section title */
+  .section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #161862;
+    margin: 50px 0 24px 0;
+    text-align: center;
+    letter-spacing: -0.3px;
+  }
+  .section-subtitle {
+    text-align: center;
+    color: #6b6b80;
+    font-size: 15px;
+    margin-bottom: 32px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* === FONT CARDS === */
+  .fonts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+  .font-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(22, 24, 98, 0.08);
+    display: flex;
+    flex-direction: column;
+  }
+  .font-preview {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 36px 28px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f4;
+  }
+  .font-preview.titoli { background: #ffffff; }
+  .font-preview.corpo { background: #f4f5fb; }
+  .font-tag {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #273B98;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 12px;
+    background: rgba(39, 59, 152, 0.10);
+    border-radius: 4px;
+  }
+  .font-name-display {
+    font-size: 56px;
+    font-weight: 700;
+    color: #161862;
+    margin-bottom: 16px;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    text-align: center;
+  }
+  .font-name-display.font-mont { font-family: 'Montserrat', sans-serif; }
+  .font-name-display.font-os { font-family: 'Open Sans', sans-serif; }
+  .font-alphabet {
+    font-size: 16px;
+    color: #4a4a5e;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 100%;
+    word-break: break-word;
+  }
+  .font-alphabet.font-mont { font-family: 'Montserrat', sans-serif; font-weight: 400; }
+  .font-alphabet.font-os { font-family: 'Open Sans', sans-serif; font-weight: 400; }
+
+  .font-body {
+    padding: 24px 26px 28px;
+  }
+  .font-body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #161862;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+  }
+  .font-body p {
+    font-size: 14.5px;
+    color: #4a4a5e;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  .font-weights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 14px;
+    border-top: 1px solid #f0f0f4;
+  }
+  .weight-pill {
+    font-size: 11px;
+    padding: 5px 12px;
+    background: #f4f5fb;
+    color: #161862;
+    border-radius: 14px;
+    font-weight: 600;
+  }
+  .weight-pill.font-mont { font-family: 'Montserrat', sans-serif; }
+  .weight-pill.font-os { font-family: 'Open Sans', sans-serif; }
+  .w300 { font-weight: 300; }
+  .w400 { font-weight: 400; }
+  .w500 { font-weight: 500; }
+  .w600 { font-weight: 600; }
+  .w700 { font-weight: 700; }
+  .w800 { font-weight: 800; }
+
+  /* === GERARCHIA TIPOGRAFICA === */
+  .hierarchy-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 44px 50px;
+    box-shadow: 0 4px 20px rgba(22, 24, 98, 0.08);
+    margin-bottom: 36px;
+  }
+  .hierarchy-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 130px;
+    gap: 24px;
+    align-items: baseline;
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f4;
+  }
+  .hierarchy-row:last-child { border-bottom: none; }
+  .h-label {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #273B98;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .h-sample.font-mont { font-family: 'Montserrat', sans-serif; color: #161862; }
+  .h-sample.font-os { font-family: 'Open Sans', sans-serif; color: #1a1a2e; }
+  .h-sample-h1 { font-size: 36px; font-weight: 700; line-height: 1.15; letter-spacing: -0.6px; }
+  .h-sample-h2 { font-size: 26px; font-weight: 600; line-height: 1.2; letter-spacing: -0.3px; }
+  .h-sample-h3 { font-size: 20px; font-weight: 600; line-height: 1.3; }
+  .h-sample-body { font-size: 16px; font-weight: 400; line-height: 1.65; color: #4a4a5e; }
+  .h-sample-small { font-size: 13px; font-weight: 400; line-height: 1.5; color: #6b6b80; }
+  .h-sample-cta { font-size: 14px; font-weight: 700; color: #ffffff; background: #273B98; padding: 9px 18px; border-radius: 6px; display: inline-block; letter-spacing: 0.3px; }
+  .h-meta {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #6b6b80;
+    text-align: right;
+    line-height: 1.5;
+  }
+  .h-meta b { color: #161862; }
+
+  /* === ESEMPI APPLICATIVI === */
+  .examples-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .example-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(22, 24, 98, 0.07);
+  }
+  .example-preview {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  /* Mockup hero homepage */
+  .mockup-hero {
+    background: linear-gradient(135deg, #161862 0%, #273B98 100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 32px;
+    color: #ffffff;
+  }
+  .mockup-hero .eyebrow {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8ED0F1;
+    margin-bottom: 10px;
+  }
+  .mockup-hero .h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+  .mockup-hero .lead {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.85);
+    max-width: 90%;
+  }
+
+  /* Mockup blog post */
+  .mockup-blog {
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 26px 28px;
+    border: 1px solid #e8e8ee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mockup-blog .meta {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: #273B98;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .mockup-blog .h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #161862;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+  }
+  .mockup-blog .body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: #4a4a5e;
+    line-height: 1.6;
+  }
+
+  /* Mockup biglietto */
+  .mockup-bcard {
+    background: #ffffff;
+    width: 290px;
+    height: 175px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-top: 4px solid #273B98;
+  }
+  .mockup-bcard .name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #161862;
+    margin-bottom: 3px;
+    line-height: 1.1;
+  }
+  .mockup-bcard .role {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    color: #6b6b80;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .mockup-bcard .info {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    color: #1a1a2e;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  /* Mockup post social */
+  .mockup-post {
+    background: linear-gradient(135deg, #ffffff 0%, #d8dcef 100%);
+    width: 220px;
+    height: 220px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(22,24,98,0.18);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mockup-post .sup {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #273B98;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .mockup-post .h-post {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #161862;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .mockup-post .caption {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: #4a4a5e;
+    line-height: 1.5;
+  }
+
+  .ec-body {
+    padding: 22px 24px 26px;
+    border-top: 1px solid #eee;
+  }
+  .ec-body h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #161862;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+  }
+  .ec-body p {
+    font-size: 14.5px;
+    color: #4a4a5e;
+    line-height: 1.55;
+    font-family: Arial, sans-serif;
+  }
+
+  /* === ERRORI === */
+  .errors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+  .error-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(22, 24, 98, 0.07);
+    border: 2px solid #ffe5e5;
+  }
+  .error-preview {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+  }
+  .error-preview .x-overlay {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 26px;
+    height: 26px;
+    background: #c41538;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+  .err-mix {
+    text-align: center;
+    line-height: 1.3;
+  }
+  .err-mix .e1 { font-family: 'Times New Roman', serif; font-size: 22px; font-weight: 700; color: #161862; display: block; }
+  .err-mix .e2 { font-family: 'Comic Sans MS', cursive; font-size: 14px; color: #c41538; display: block; }
+  .err-mix .e3 { font-family: 'Courier New', monospace; font-size: 12px; color: #4a4a5e; display: block; margin-top: 4px; }
+
+  .err-bold-body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #161862;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    text-align: left;
+  }
+
+  .err-spacing {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #161862;
+    letter-spacing: -3.5px;
+    text-align: center;
+  }
+
+  .err-justify {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10.5px;
+    color: #4a4a5e;
+    line-height: 1.4;
+    text-align: justify;
+    width: 95px;
+    word-break: break-all;
+  }
+
+  .error-info {
+    padding: 14px 16px 16px;
+    border-top: 1px solid #ffe5e5;
+  }
+  .error-info h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #c41538;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+  }
+  .error-info p {
+    font-size: 12.5px;
+    color: #5a5a70;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 2px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6b6b80;
+    font-size: 13px;
+  }
+  .footer .author b { color: #1a1a2e; }
+  .footer .pages-brand {
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .footer .pages-brand span { color: #E61F4D; }
+
+  @media (max-width: 900px) {
+    .fonts-grid, .examples-grid, .errors-grid { grid-template-columns: 1fr; }
+    .hierarchy-row { grid-template-columns: 1fr; }
+    .h-meta { text-align: left; }
+    .header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .header .subtitle { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Regole Utilizzo <span>Font</span></h1>
+    <div class="subtitle">
+      <b>RSA SAN FRANCESCO - CALYPSO SOC. COOP. SOCIALE ONLUS</b><br>
+      Strategia Sito Web - Linee Guida Tipografiche
+    </div>
+  </div>
+
+  <!-- FONT DEL BRAND -->
+  <div class="section-title">Font del brand</div>
+  <p class="section-subtitle">
+    Il sistema tipografico è costruito su <b>due famiglie complementari</b>: una <b>geometrica</b> per i titoli e gli elementi di forte impatto visivo, una <b>umanistica</b> ad alta leggibilità per il corpo del testo. Entrambi i font sono <b>gratuiti, open source</b> e disponibili su Canva e Google Fonts.
+  </p>
+
+  <div class="fonts-grid">
+
+    <!-- MONTSERRAT - TITOLI -->
+    <div class="font-card">
+      <div class="font-preview titoli">
+        <span class="font-tag">Titoli · Display</span>
+        <div class="font-name-display font-mont">Montserrat</div>
+        <div class="font-alphabet font-mont">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; %! ?</div>
+      </div>
+      <div class="font-body">
+        <h3>Montserrat - Per i titoli</h3>
+        <p>Sans-serif <b>geometrico moderno</b> ispirato all'insegnistica del quartiere Montserrat di Buenos Aires. Trasferisce <b>autorevolezza, ordine e modernità</b>. Perfetto per intestazioni di sezione, hero del sito, copertine social, biglietti da visita e tutti gli elementi di forte gerarchia visiva. Successore "free" di Gotham, mantiene continuità con il Visual Concept del cliente.</p>
+        <div class="font-weights">
+          <span class="weight-pill font-mont w300">Light 300</span>
+          <span class="weight-pill font-mont w400">Regular 400</span>
+          <span class="weight-pill font-mont w500">Medium 500</span>
+          <span class="weight-pill font-mont w600">SemiBold 600</span>
+          <span class="weight-pill font-mont w700">Bold 700</span>
+          <span class="weight-pill font-mont w800">ExtraBold 800</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPEN SANS - CORPO -->
+    <div class="font-card">
+      <div class="font-preview corpo">
+        <span class="font-tag">Corpo · Body</span>
+        <div class="font-name-display font-os">Open Sans</div>
+        <div class="font-alphabet font-os">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 &amp; %! ?</div>
+      </div>
+      <div class="font-body">
+        <h3>Open Sans - Per il corpo</h3>
+        <p>Sans-serif <b>umanistico</b> progettato da Steve Matteson con un'apertura del carattere studiata per la <b>massima leggibilità su schermo</b>. Standard mondiale del web sanitario. Garantisce comfort di lettura per il pubblico over 60 (caregiver e pazienti). Ideale per paragrafi, descrizioni di servizi, didascalie, label di form e dati tecnici.</p>
+        <div class="font-weights">
+          <span class="weight-pill font-os w300">Light 300</span>
+          <span class="weight-pill font-os w400">Regular 400</span>
+          <span class="weight-pill font-os w500">Medium 500</span>
+          <span class="weight-pill font-os w600">SemiBold 600</span>
+          <span class="weight-pill font-os w700">Bold 700</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GERARCHIA TIPOGRAFICA -->
+  <div class="section-title">Gerarchia tipografica</div>
+  <p class="section-subtitle">
+    La <b>combinazione corretta</b> dei due font segue una scala gerarchica precisa. Montserrat per i titoli, Open Sans per ogni testo discorsivo o informativo.
+  </p>
+
+  <div class="hierarchy-card">
+
+    <div class="hierarchy-row">
+      <div class="h-label">H1 / Titolo</div>
+      <div class="h-sample font-mont h-sample-h1">Centro di Neuro-Riabilitazione</div>
+      <div class="h-meta"><b>Montserrat Bold</b><br>36 px / 1.15</div>
+    </div>
+
+    <div class="hierarchy-row">
+      <div class="h-label">H2 / Sezione</div>
+      <div class="h-sample font-mont h-sample-h2">Tecnologie cliniche di livello IRCCS</div>
+      <div class="h-meta"><b>Montserrat SemiBold</b><br>26 px / 1.2</div>
+    </div>
+
+    <div class="hierarchy-row">
+      <div class="h-label">H3 / Sotto-sezione</div>
+      <div class="h-sample font-mont h-sample-h3">Sistema NIRVANA - Realtà virtuale riabilitativa</div>
+      <div class="h-meta"><b>Montserrat SemiBold</b><br>20 px / 1.3</div>
+    </div>
+
+    <div class="hierarchy-row">
+      <div class="h-label">Body / Paragrafo</div>
+      <div class="h-sample font-os h-sample-body">Il nostro percorso ambulatoriale integra riabilitazione cognitiva e motoria attraverso tecnologie validate scientificamente, sotto la guida della direzione sanitaria geriatrica.</div>
+      <div class="h-meta"><b>Open Sans Regular</b><br>16 px / 1.65</div>
+    </div>
+
+    <div class="hierarchy-row">
+      <div class="h-label">Small / Caption</div>
+      <div class="h-sample font-os h-sample-small">Viale Seminario Maggiore 141, 85100 Potenza · 377 095 2522</div>
+      <div class="h-meta"><b>Open Sans Regular</b><br>13 px / 1.5</div>
+    </div>
+
+    <div class="hierarchy-row">
+      <div class="h-label">CTA / Pulsante</div>
+      <div class="h-sample font-mont"><span class="h-sample-cta">Prenota una visita</span></div>
+      <div class="h-meta"><b>Montserrat Bold</b><br>14 px - All caps no</div>
+    </div>
+
+  </div>
+
+  <!-- ESEMPI APPLICATIVI -->
+  <div class="section-title">Esempi applicativi</div>
+  <p class="section-subtitle">
+    Quattro casi d'uso reali in cui la combinazione <b>Montserrat + Open Sans</b> trova la sua applicazione: hero del sito, articolo del blog editoriale, biglietto da visita istituzionale e post social.
+  </p>
+
+  <div class="examples-grid">
+
+    <div class="example-card">
+      <div class="example-preview" style="background:#f0f2f7;">
+        <div class="mockup-hero">
+          <div class="eyebrow">POLO DELLE NEUROSCIENZE</div>
+          <div class="h1">Riabilitazione che incontra la persona.</div>
+          <div class="lead">Un percorso ambulatoriale costruito su tecnologie di realtà virtuale, robotica riabilitativa e direzione sanitaria geriatrica, a Potenza.</div>
+        </div>
+      </div>
+      <div class="ec-body">
+        <h3>Hero homepage del sito</h3>
+        <p>Titolo principale in <b>Montserrat Bold</b>, lead paragraph in <b>Open Sans Regular</b>, eyebrow in caps con tracking ampio. Massimo impatto + perfetta leggibilità.</p>
+      </div>
+    </div>
+
+    <div class="example-card">
+      <div class="example-preview" style="background:#f0f2f7;">
+        <div class="mockup-blog">
+          <div class="meta">21 SETTEMBRE · ALZHEIMER</div>
+          <div class="h2">Cosa significa avere una diagnosi di decadimento cognitivo lieve</div>
+          <div class="body">La diagnosi precoce è fondamentale per costruire un percorso riabilitativo personalizzato che valorizza le capacità residue e supporta la qualità della vita.</div>
+        </div>
+      </div>
+      <div class="ec-body">
+        <h3>Articolo blog editoriale</h3>
+        <p>Titolo in <b>Montserrat Bold</b> per l'impatto del messaggio, corpo in <b>Open Sans Regular</b> per la lettura prolungata. Meta in caps Open Sans.</p>
+      </div>
+    </div>
+
+    <div class="example-card">
+      <div class="example-preview" style="background:#f0f2f7;">
+        <div class="mockup-bcard">
+          <div class="name">Dott. Saverio Telesca</div>
+          <div class="role">Direzione Sanitaria · Geriatria</div>
+          <div class="info">Tel. 377 095 2522<br>info@centroneuroriabilitazione.it<br>Viale Seminario Maggiore 141, Potenza</div>
+        </div>
+      </div>
+      <div class="ec-body">
+        <h3>Biglietto da visita</h3>
+        <p>Nome del professionista in <b>Montserrat Bold</b>, ruolo e dati di contatto in <b>Open Sans</b>. Bordo superiore in #273B98 come elemento di brand recognition.</p>
+      </div>
+    </div>
+
+    <div class="example-card">
+      <div class="example-preview" style="background:#f0f2f7;">
+        <div class="mockup-post">
+          <div class="sup">SAPEVI CHE</div>
+          <div class="h-post">La realtà virtuale stimola la memoria.</div>
+          <div class="caption">Il sistema NIRVANA proietta scenari interattivi che allenano attenzione, memoria e coordinazione attraverso il movimento.</div>
+        </div>
+      </div>
+      <div class="ec-body">
+        <h3>Post social - Format quadrato</h3>
+        <p>Headline in <b>Montserrat ExtraBold</b> per fermare lo scroll, caption in <b>Open Sans Regular</b> per il messaggio informativo. Format 1080x1080 perfetto per IG/FB.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ERRORI -->
+  <div class="section-title">Errori da evitare</div>
+  <p class="section-subtitle">
+    Quattro applicazioni <b>scorrette</b> da non utilizzare mai. Ognuna compromette leggibilità, gerarchia o coerenza visiva del marchio.
+  </p>
+
+  <div class="errors-grid">
+
+    <div class="error-card">
+      <div class="error-preview">
+        <div class="x-overlay">✕</div>
+        <div class="err-mix">
+          <span class="e1">Centro</span>
+          <span class="e2">Neuroriabilitazione</span>
+          <span class="e3">San Francesco</span>
+        </div>
+      </div>
+      <div class="error-info">
+        <h4>Mix di troppi font</h4>
+        <p>Mai utilizzare più di <b>due font</b> nello stesso layout. Mai serif + script + monospace mischiati: distrugge la coerenza visiva.</p>
+      </div>
+    </div>
+
+    <div class="error-card">
+      <div class="error-preview">
+        <div class="x-overlay">✕</div>
+        <div class="err-bold-body">
+          IL NOSTRO PERCORSO AMBULATORIALE INTEGRA RIABILITAZIONE COGNITIVA E MOTORIA ATTRAVERSO TECNOLOGIE VALIDATE SCIENTIFICAMENTE.
+        </div>
+      </div>
+      <div class="error-info">
+        <h4>Pesi inappropriati nel corpo</h4>
+        <p>Mai usare <b>Bold 700/800</b> per blocchi di testo lunghi o testi tutti in maiuscolo: affatica la lettura del target over 60.</p>
+      </div>
+    </div>
+
+    <div class="error-card">
+      <div class="error-preview">
+        <div class="x-overlay">✕</div>
+        <div class="err-spacing">Neuro-Riabilitazione</div>
+      </div>
+      <div class="error-info">
+        <h4>Spaziatura troppo compressa</h4>
+        <p>Mai applicare <b>letter-spacing negativo eccessivo</b> ai titoli. Le lettere devono respirare per garantire leggibilità clinica.</p>
+      </div>
+    </div>
+
+    <div class="error-card">
+      <div class="error-preview">
+        <div class="x-overlay">✕</div>
+        <div class="err-justify">Il percorso ambulatoriale integra riabilitazione cognitiva.</div>
+      </div>
+      <div class="error-info">
+        <h4>Giustificato in colonne strette</h4>
+        <p>Mai allineare a <b>justify</b> testi in colonne strette: crea "fiumi" di spazi bianchi che spezzano la lettura. Allineare a sinistra.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="author">A cura di: <b>Salvo Bilotti</b> - Strategist</div>
+    <div class="pages-brand">pagine<span>sì!</span></div>
+  </div>
+
+</div>
+</body>
+</html>
